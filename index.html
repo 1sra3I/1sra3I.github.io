@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portafolio | [Tu nombre completo]</title>
+<title>Portafolio | Pepo Raigo Molina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
@@ -51,7 +51,11 @@ summary{cursor:pointer;font:400 1.5rem/1.2 Bangers,Impact,sans-serif;letter-spac
 details h4{margin:1.2rem 0 .2rem;font-size:1rem;color:var(--gold)}
 details p{margin:0 0 .4rem}
 footer{background:var(--deep);border-top:3px solid var(--blood);padding:1.5rem;text-align:center;color:var(--moon);font-size:.9rem}
-@media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+.fotos{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:.6rem}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border:3px solid var(--paper);background:var(--abyss)}
+figcaption{font-size:.9rem;color:var(--moon);margin-top:.3rem}
+@media (min-width:800px){.grid,.fotos{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -93,9 +97,9 @@ footer{background:var(--deep);border-top:3px solid var(--blood);padding:1.5rem;t
   <section id="habilidades">
     <h2>Habilidades</h2>
     <h3>Tecnologías que mejor manejo</h3>
-    <ul class="chips"><li>[Base de Datos]</li><li>[Python]</li><li>[Interfaces]</li><li>[Figma]</li></ul>
+    <ul class="chips"><li>Base de Datos</li><li>Python</li><li>Interfaces</li><li>Figma</li></ul>
     <h3>Habilidades sociales</h3>
-    <ul class="chips"><li>[Trabajo en equipo]</li><li>[Conocimiento de Tecnologia]</li><li>[Solucion de problemas]</li></ul>
+    <ul class="chips"><li>Trabajo en equipo</li><li>Conocimiento de Tecnologia</li><li>Solucion de problemas</li></ul>
   </section>
 
   <section id="proyectos">
@@ -104,25 +108,25 @@ footer{background:var(--deep);border-top:3px solid var(--blood);padding:1.5rem;t
       <div class="proyecto">
         <h3>Inventario</h3>
         <p>Es un Sistema de Inventario que contaba con una BD, el cual mandaba los datos de la BD a una tabla y la tabla formaba parte de mi interfaz.</p>
-        <p class="meta">[Netbeans (Java), DB Browser]</p>
+        <p class="meta">Netbeans (Java), DB Browser</p>
         <a href="https://github.com/1sra3I/Inventario">Ver repositorio en GitHub</a>
       </div>
       <div class="proyecto">
         <h3>Sistema de monitoreo</h3>
         <p>Desarrolle un Sistema de monitoreo, el cual este conformado de dos programas uno de cliente y el otro de servidor, y pueda graficar 3 puntos aleatorios simulado y con Arduino vía serial.</p>
-        <p class="meta">[Netbeans (Java), Arduino IDE, DB Browser]</p>
+        <p class="meta">Netbeans (Java), Arduino IDE, DB Browser</p>
         <a href="https://github.com/1sra3I/Sistema-de-Monitoreo">Ver repositorio en GitHub</a>
       </div>
       <div class="proyecto">
         <h3>While Final</h3>
         <p>Este programa se ejecuta en consola y te muestra un menú con distintas opciones, esas opciones fueron temas vistos en clase.</p>
-        <p class="meta">[VisualCode (Java)]</p>
+        <p class="meta">VisualCode (Java)</p>
         <a href="https://github.com/1sra3I/WhileFinal-aplicando-estructura-de-control-y-arreglos">Ver repositorio en GitHub</a>
       </div>
       <div class="proyecto">
-        <h3>[API Codigos Postales]</h3>
+        <h3>API Códigos Postales</h3>
         <p>Desarrollamos un API en PHP, el pueda mostrar los códigos postales de nuestra BD, y se muestren en pantalla en localhost activando los servicios de MYSQL.</p>
-        <p class="meta">[VisualCode (PHP), MySQL, Xampp]</p>
+        <p class="meta">VisualCode (PHP), MySQL, Xampp</p>
         <a href="https://github.com/1sra3I/Api-de-codigos-postales/blob/main/README.md">Ver repositorio en GitHub</a>
       </div>
     </div>
@@ -132,24 +136,34 @@ footer{background:var(--deep);border-top:3px solid var(--blood);padding:1.5rem;t
     <h2>Blog</h2>
     <p>Proyectos que no se pueden subir a un repositorio. Abre cada uno para leerlo.</p>
     <details>
-      <summary>[Título del proyecto del blog 1]</summary>
-      <h4>Descripción</h4><p>[...]</p>
-      <h4>Requerimientos del cliente</h4><p>[...]</p>
-      <h4>¿Cómo se diseñó la solución?</h4><p>[...]</p>
-      <h4>¿Cómo se implementó la solución?</h4><p>[...]</p>
-      <h4>¿Cuál fue el resultado?</h4><p>[...]</p>
+      <summary>Implementación de una red WAN en diferentes estados</summary>
+      <h4>Descripción</h4><p>Diseñé una red con 3 sedes en estados diferentes (Hermosillo, Obregón y Nogales). Cada sede tiene su propia red local, PC, servidor, router y un dispositivo, y los 3 routers se enlazan entre sí.</p>
+      <h4>Requerimientos del cliente</h4><p>Que las computadoras de las tres sedes pudieran comunicarse entre sí. [Agrega otros requisitos que te pidieron.]</p>
+      <h4>¿Cómo se diseñó la solución?</h4><p>Armé la topología en Packet Tracer con un router por sede. [Explica el direccionamiento IP y cómo se conectan los routers.]</p>
+      <h4>¿Cómo se implementó la solución?</h4><p>[Cuenta cómo configuraste IPs, rutas y pruebas. Agrega capturas de pantalla.]</p>
+      <h4>¿Cuál fue el resultado?</h4><p>[Cuenta si lograste ping entre todas las computadoras y qué aprendiste.]</p>
+      <h4>Capturas</h4>
+      <div class="fotos">
+        <figure><img src="wan-1.png" alt="Captura 1 de wan-1"><figcaption>[Describe la captura 1]</figcaption></figure>
+        <figure><img src="wan-2.png" alt="Captura 2 de wan-2"><figcaption>[Describe la captura 2]</figcaption></figure>
+      </div>
     </details>
     <details>
-      <summary>[Título del proyecto del blog 2]</summary>
-      <h4>Descripción</h4><p>[...]</p>
-      <h4>Requerimientos del cliente</h4><p>[...]</p>
-      <h4>¿Cómo se diseñó la solución?</h4><p>[...]</p>
-      <h4>¿Cómo se implementó la solución?</h4><p>[...]</p>
-      <h4>¿Cuál fue el resultado?</h4><p>[...]</p>
+      <summary>Análisis de redes</summary>
+      <h4>Descripción</h4><p>Proyecto en equipo donde analizamos el espectro de la red en distintos puntos de la casa para identificar redes vecinas, el uso de canales y la diferencia entre la banda de 2.4 GHz y la de 5 GHz.</p>
+      <h4>Requerimientos del cliente</h4><p>[Qué se pidió analizar y entregar.]</p>
+      <h4>¿Cómo se diseñó la solución?</h4><p>[Cómo planeaste las mediciones: puntos de la casa, herramienta usada.]</p>
+      <h4>¿Cómo se implementó la solución?</h4><p>[Cómo hicieron las mediciones y qué datos recopilaron. Agrega capturas.]</p>
+      <h4>¿Cuál fue el resultado?</h4><p>[Qué concluyeron sobre los canales y las dos bandas.]</p>
+      <h4>Capturas</h4>
+      <div class="fotos">
+        <figure><img src="analisis-1.png" alt="Captura 1 de analisis-1"><figcaption>[Describe la captura 1]</figcaption></figure>
+        <figure><img src="analisis-2.png" alt="Captura 2 de analisis-2"><figcaption>[Describe la captura 2]</figcaption></figure>
+      </div>
     </details>
   </section>
 </main>
 
-<footer>© [Año] [Tu nombre completo]</footer>
+<footer>© 2026 Pepo Raigo Molina</footer>
 </body>
 </html>
