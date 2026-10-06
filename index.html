@@ -9,51 +9,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --abyss:#0A1F1E; --deep:#061312; --panel:#102B29; --moon:#C5D2C0;
-  --flame:#4FD6A0; --blood:#C8243A; --paper:#F3EBD3; --gold:#F2A81D; --ink:#111;
+  --abyss:#090B0A; --deep:#050606; --panel:#101612; --moon:#A9D9A6;
+  --zoro:#4CC24A; --zoro-d:#2E8B3A; --haki:#E3122D; --haki-t:#FF4D63; --paper:#F2F7F0; --ink:#111;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:4rem}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--abyss);color:var(--paper);font:18px/1.65 Barlow,system-ui,sans-serif}
-a{color:var(--flame);font-weight:600}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.hero{position:relative;overflow:hidden;padding:5rem 1.5rem 4rem;
-  background:radial-gradient(circle at 12% 95%,rgba(79,214,160,.28),transparent 40%),var(--abyss)}
-.hero::before{content:"";position:absolute;right:8%;top:50%;width:min(340px,55vw);aspect-ratio:1;border-radius:50%;
-  transform:translateY(-50%);background:radial-gradient(circle at 40% 35%,#DDE6D8,var(--moon) 45%,#8FA08F);opacity:.3}
-.bolt{position:absolute;top:0;width:150px;height:260px;fill:none;stroke:var(--blood);stroke-width:4;stroke-linejoin:miter;
-  filter:drop-shadow(0 0 6px var(--blood))}
+a{color:var(--zoro);font-weight:600}
+a:focus-visible,summary:focus-visible,nav a:focus-visible{outline:3px solid var(--haki-t);outline-offset:3px}
+.hero{position:relative;overflow:hidden;padding:5rem 1.5rem 7rem;
+  background:radial-gradient(circle at 6% 100%,rgba(76,194,74,.35),transparent 42%),
+  radial-gradient(circle at 96% 85%,rgba(76,194,74,.22),transparent 38%),
+  radial-gradient(circle at 60% 0%,rgba(227,18,45,.3),transparent 48%),var(--abyss);
+  clip-path:polygon(0 0,100% 0,100% 90%,90% 100%,80% 89%,68% 100%,56% 89%,44% 100%,32% 89%,20% 100%,9% 90%,0 100%)}
+.hero::before{content:"覇";content:"覇" / "";position:absolute;right:4%;top:46%;transform:translateY(-50%);
+  font:900 clamp(11rem,30vw,22rem)/1 system-ui,sans-serif;color:var(--haki);opacity:.16;pointer-events:none}
+.bolt{position:absolute;top:0;width:150px;height:260px;fill:none;stroke:var(--haki);stroke-width:3;stroke-linejoin:miter;
+  filter:drop-shadow(0 0 8px var(--haki)) drop-shadow(0 0 2px #000)}
 .bolt.l{left:2%}
 .bolt.r{right:2%;transform:scaleX(-1)}
-.hero .in{position:relative;max-width:960px;margin:0 auto}
+.hero .in{position:relative;z-index:1;max-width:960px;margin:0 auto}
 .hero h1{font:400 clamp(3.2rem,10vw,7rem)/.95 Bangers,Impact,sans-serif;letter-spacing:.02em;margin:0 0 1.8rem;
-  text-shadow:4px 4px 0 var(--blood)}
+  text-shadow:0 0 24px rgba(76,194,74,.45),4px 4px 0 var(--haki)}
 .bubble{position:relative;display:inline-block;background:var(--paper);color:var(--ink);border:3px solid var(--ink);
   border-radius:24px;padding:.6rem 1.2rem;font-size:1.25rem;font-weight:600}
 .bubble::after{content:"";position:absolute;left:28px;bottom:-18px;border:9px solid transparent;border-top:12px solid var(--ink)}
-nav{position:sticky;top:0;z-index:5;background:var(--deep);border-bottom:3px solid var(--blood)}
-nav ul{list-style:none;margin:0 auto;padding:.8rem 1.5rem;max-width:960px;display:flex;flex-wrap:wrap;gap:.3rem 1.6rem}
-nav a{color:var(--paper);text-decoration:none;font-weight:400;border-bottom:3px solid transparent}
-nav a:hover{border-bottom-color:var(--blood)}
+nav{position:sticky;top:0;z-index:5;background:rgba(5,6,6,.94);border-bottom:3px solid var(--haki)}
+nav ul{list-style:none;margin:0 auto;padding:.7rem 1.5rem;max-width:960px;display:flex;flex-wrap:wrap;gap:.5rem}
+nav a{display:block;color:var(--paper);text-decoration:none;font-weight:600;font-size:.95rem;padding:.25rem 1rem;
+  border:2px solid var(--zoro-d);border-radius:999px;transition:background .15s,color .15s}
+nav a:hover{background:var(--zoro);border-color:var(--zoro);color:#04140A}
 main{max-width:960px;margin:0 auto;padding:0 1.5rem 3rem}
 section{padding-top:3.2rem}
-h2{font:400 2.4rem/1.1 Bangers,Impact,sans-serif;letter-spacing:.04em;color:var(--gold);margin:0 0 1rem}
+h2{font:400 2.4rem/1.1 Bangers,Impact,sans-serif;letter-spacing:.04em;color:var(--zoro);margin:0 0 1.2rem;
+  border-left:8px solid var(--haki);padding-left:.7rem}
 h3{font:400 1.5rem/1.2 Bangers,Impact,sans-serif;letter-spacing:.03em;margin:0 0 .3rem}
 p{margin:0 0 1rem}
 .meta{color:var(--moon);font-size:.95rem}
-ul.chips{list-style:none;padding:0;margin:0 0 1.4rem;display:flex;flex-wrap:wrap;gap:.5rem}
-ul.chips li{border:2px solid var(--flame);color:var(--flame);padding:.2rem .8rem;border-radius:4px;font-weight:600}
+ul.chips{list-style:none;padding:0 .4rem;margin:0 0 1.4rem;display:flex;flex-wrap:wrap;gap:.6rem}
+ul.chips li{background:var(--zoro);color:#04140A;padding:.2rem .9rem;font-weight:700;transform:skewX(-12deg)}
 .grid{display:grid;gap:1.8rem;grid-template-columns:1fr}
-.proyecto,details{background:var(--panel);border:3px solid var(--paper);box-shadow:6px 6px 0 var(--blood);padding:1.1rem 1.2rem}
-details{margin:0 0 1.8rem}
+.proyecto,details{background:var(--panel);border-left:6px solid var(--zoro);border-top:1px solid #1E2A21;padding:1.1rem 1.3rem;
+  clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px))}
+.proyecto{border-bottom:4px solid var(--haki)}
+details{margin:0 0 1.8rem;border-bottom:4px solid var(--haki)}
 summary{cursor:pointer;font:400 1.5rem/1.2 Bangers,Impact,sans-serif;letter-spacing:.03em}
-details h4{margin:1.2rem 0 .2rem;font-size:1rem;color:var(--gold)}
+details h4{margin:1.2rem 0 .2rem;font-size:1rem;color:var(--haki-t)}
 details p{margin:0 0 .4rem}
-footer{background:var(--deep);border-top:3px solid var(--blood);padding:1.5rem;text-align:center;color:var(--moon);font-size:.9rem}
+footer{background:var(--deep);border-top:3px solid var(--haki);padding:1.5rem;text-align:center;color:var(--moon);font-size:.9rem}
 .fotos{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:.6rem}
 figure{margin:0}
-figure img{display:block;width:100%;height:auto;border:3px solid var(--paper);background:var(--abyss)}
+figure img{display:block;width:100%;height:auto;border:3px solid var(--zoro-d);background:var(--abyss)}
 figcaption{font-size:.9rem;color:var(--moon);margin-top:.3rem}
 @media (min-width:800px){.grid,.fotos{grid-template-columns:1fr 1fr}}
 </style>
